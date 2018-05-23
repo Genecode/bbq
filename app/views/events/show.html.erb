@@ -19,7 +19,7 @@
               <%= link_to 'Изменить', edit_event_path(@event),
                 class: 'btn btn-primary' %>
               <%= link_to "Удалить", event_path(@event),
-                method: :delete, data: {confirm: 'Вы уверены?'},
+                method: :delete, data: {confirm: t('confirm.sure')},
                 class: 'btn btn-danger' %>
             </div>
           <% end %>

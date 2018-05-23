@@ -5,7 +5,6 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
-
     # Перевод названий аттрибутов моделей
     attributes:
       user:
@@ -32,3 +31,6 @@ ru:
   app:
     name: 'Шашлыки'
     company: 'МЕЛ'
+
+  confirm:
+    sure: 'Вы уверены?'
