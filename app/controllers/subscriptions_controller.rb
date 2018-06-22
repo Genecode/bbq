@@ -29,7 +29,7 @@ class SubscriptionsController < ApplicationController
 
   private
   def set_subscription
-    @subscription = @event.subscription.find(params[:id])
+    @subscription = Subscription.find(params[:id])
   end
 
   def set_event

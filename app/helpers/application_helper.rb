@@ -25,4 +25,9 @@ module ApplicationHelper
   def fa_icon(icon_class)
     content_tag 'span', '', class: "fas fa-#{icon_class}"
   end
+
+  def current_user_can_subscrube?(model)
+    !user_signed_in? || ( model.user != current_user && model.subscribers.find_by(id: current_user.id).nil? )
+  end
+
 end
