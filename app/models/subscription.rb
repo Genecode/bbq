@@ -11,6 +11,7 @@ class Subscription < ApplicationRecord
 
   #Свой валидатор
   validate :anonymous_cant_subscribe_exist_user, on: :create
+  validate :author_cant_subscribe, on: :create
 
   def user_name
     if user.present?
@@ -33,6 +34,12 @@ class Subscription < ApplicationRecord
   def anonymous_cant_subscribe_exist_user
     if user.blank? && User.find_by(email: user_email).present?
       errors.add(:user_email, I18n.t('errors.email_exist'))
+    end
+  end
+
+  def author_cant_subscribe
+    if user == event.user then
+      errors.add(:user_name, I18n.t('errors.author'))
     end
   end
 end

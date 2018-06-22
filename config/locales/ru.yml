@@ -58,4 +58,5 @@ ru:
       user_email: 'Email'
   # Ошибки
   errors:
-    email_exist: 'Email уже занят'
+    email_exist: 'уже занят'
+    author: 'уже идет сам'
