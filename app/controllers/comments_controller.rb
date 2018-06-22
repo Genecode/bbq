@@ -16,11 +16,8 @@ class CommentsController < ApplicationController
 
   # DELETE /comments/1
   def destroy
-    @new_comment = @event.comments.build(comment_params)
-    @new_comment.user = current_user
-
     message = {notice: t('controllers.comments.destroy')}
-    if current_user_can_edit?
+    if current_user_can_edit?(@comment)
       @comment.destroy!
     else
       message = {alert: t('controllers.comments.error')}
