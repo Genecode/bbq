@@ -9,6 +9,9 @@ class Subscription < ApplicationRecord
   validates :user, uniqueness: {scope: :event_id}, if: -> {user.present?}
   validates :user_email, uniqueness: {scope: :event_id}, unless: -> {user.present?}
 
+  #Свой валидатор
+  validate :anonymous_cant_subscribe_exist_user, on: :create
+
   def user_name
     if user.present?
       user.name
@@ -22,6 +25,14 @@ class Subscription < ApplicationRecord
       user.email
     else
       super
+    end
+  end
+
+  private
+
+  def anonymous_cant_subscribe_exist_user
+    if user.blank? && User.find_by(email: user_email).present?
+      errors.add(:user_email, I18n.t('errors.email_exist'))
     end
   end
 end

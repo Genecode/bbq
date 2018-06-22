@@ -50,9 +50,12 @@ ru:
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
-  #Вьюхи
+  # Вьюхи
   views:
     form:
       body: 'Комментарий'
       user_name: 'Пользователь'
       user_email: 'Email'
+  # Ошибки
+  errors:
+    email_exist: 'Email уже занят'
