@@ -10,6 +10,8 @@ gem 'bootsnap'
 gem 'listen'
 gem 'twitter-bootstrap-rails'
 gem 'font-awesome-rails'
+gem 'carrierwave'
+gem 'rmagick'
 
 gem 'devise'
 gem 'devise-i18n'
