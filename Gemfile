@@ -6,7 +6,7 @@ ruby '>=2.5.1'
 gem 'rails', '~> 5.2.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
-gem 'bootsnap'
+#gem 'bootsnap'
 gem 'listen'
 gem 'twitter-bootstrap-rails'
 gem 'font-awesome-rails'
@@ -26,6 +26,5 @@ end
 group :production do
   gem 'pg'
 end
-
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
