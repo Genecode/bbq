@@ -24,4 +24,10 @@ class ApplicationController < ActionController::Base
       (model.try(:event).present? && model.event.user == current_user)
     )
   end
+
+  #массив почтовых адресов для рассылок за исключением почты автора действия
+  def email_for_notify(event)
+    event.subscriptions.map(&:user_email) + [event.user.email] - [current_user.try(:email)]
+  end
+
 end
