@@ -21,7 +21,7 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
-        photo:
+      photo:
         photo: 'Фотография'
   # Перевод сообщений, которые отправляет контроллер
   controllers:
@@ -85,3 +85,9 @@ ru:
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
+    photo:
+      title: 'Новая фотография'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+      author: 'Автор'
