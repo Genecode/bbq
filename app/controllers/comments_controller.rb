@@ -41,7 +41,7 @@ class CommentsController < ApplicationController
 
 
   def notify_subscribers(event, comment)
-    email_for_notify(event).each do |mail|
+    emails_to_notify(event).each do |mail|
       EventMailer.comment(event,comment,mail).deliver_now
     end
   end

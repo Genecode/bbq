@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
   end
 
   #массив почтовых адресов для рассылок за исключением почты автора действия
-  def email_for_notify(event)
+  def emails_to_notify(event)
     event.subscriptions.map(&:user_email) + [event.user.email] - [current_user.try(:email)]
   end
 
