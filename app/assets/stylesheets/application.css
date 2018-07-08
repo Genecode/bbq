@@ -30,8 +30,8 @@
 }
 
 .buffer-both {
-  margin-top: 20px;
   margin-bottom: 20px;
+  margin-right: 20px;
 }
 
 /* Avatars for users & events */

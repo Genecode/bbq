@@ -39,9 +39,6 @@
         </div>
       </div>
 
-
-
-
       <div class="event-comments buffer-top">
         <%= render partial: 'comments/form', locals: {comment: @new_comment || @event.comments.build}  %>
         <div class="buffer-both">
@@ -77,4 +74,10 @@
       <div id="map" class="event-map" data-address="<%= @event.address %>"></div>
     </div>
   </div>
-</div>
+ </div>
+<script>
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+</script>
