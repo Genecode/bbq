@@ -33,7 +33,6 @@ module ApplicationHelper
     !(user_signed_in? &&  model.user == current_user || model.subscribers.exists?(current_user.try(:id)))
   end
 
-
   def user_avatar_thumb(user)
     if user.avatar.file.present?
       user.avatar.thumb.url
