@@ -21,7 +21,6 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
   adapter: postgresql
   database: myapp
   user: Rails.application.credentials.myapp[:user]
